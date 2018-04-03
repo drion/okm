@@ -9,6 +9,8 @@ import App from "./App/App";
 import registerServiceWorker from "./registerServiceWorker";
 import { store, persistor } from "./_helpers/store";
 
+import "./_styles/main.scss";
+
 ReactDOM.render(
     <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
