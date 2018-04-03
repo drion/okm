@@ -1,16 +1,18 @@
-.login-page {
-    .login-form-card {
-        max-width: 480px;
-        width: 100%;
-        padding: 24px 48px;
+.form-card,
+.ui.card.form-card {
+    max-width: 480px !important;
+    width: 100%;
+    padding: 24px 48px;
+}
 
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+.centered-card,
+.ui.card.centered-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
-        .submit-button-container {
-            text-align: right;
-        }
-    }
+.submit-button-container {
+    text-align: right;
 }

@@ -4,6 +4,7 @@ import { Route } from "react-router";
 
 import HomePage from "../HomePage/HomePage";
 import LoginPage from "../LoginPage/LoginPage";
+import SignupPage from "../SignupPage/SignupPage";
 
 import GuestRoute from "../_components/routes/GuestRoute";
 
@@ -15,6 +16,12 @@ const App = ({ location }) => (
             exact
             path="/login"
             component={LoginPage}
+        />
+        <GuestRoute
+            location={location}
+            exact
+            path="/signup"
+            component={SignupPage}
         />
     </div>
 );
