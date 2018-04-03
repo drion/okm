@@ -5,6 +5,8 @@ import { PersistGate } from "redux-persist/integration/react";
 
 import { Provider } from "react-redux";
 
+import "semantic-ui-css/semantic.min.css";
+
 import App from "./App/App";
 import registerServiceWorker from "./registerServiceWorker";
 import { store, persistor } from "./_helpers/store";

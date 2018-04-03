@@ -18,7 +18,7 @@ export const configureStore = () => {
     const loggerMiddleware = createLogger();
     const reducer = persistReducer(
         {
-            key: "ai",
+            key: "okm",
             whitelist: ["authentication"],
             transforms: [persistedFilter],
             storage
