@@ -53,31 +53,31 @@ class LoginForm extends React.Component {
                 loading={loading}
             >
                 <Form.Field error={!!errors.username}>
-                    <label htmlFor="username">Username</label>
+                    <label htmlFor="username">Логін</label>
                     <input
                         type="text"
                         id="username"
                         name="username"
-                        placeholder="Username"
+                        placeholder="username@gmail.com"
                         value={data.username}
                         onChange={this.onChange}
                     />
                     {errors.username && <InlineError text={errors.username} />}
                 </Form.Field>
                 <Form.Field error={!!errors.password}>
-                    <label htmlFor="password">Password</label>
+                    <label htmlFor="password">Пароль</label>
                     <input
                         type="password"
                         id="password"
                         name="password"
-                        placeholder="Password"
+                        placeholder="password"
                         value={data.password}
                         onChange={this.onChange}
                     />
                     {errors.password && <InlineError text={errors.password} />}
                 </Form.Field>
                 <div className="submit-button-container">
-                    <Button primary>Submit</Button>
+                    <Button className="purple-button">Увійти</Button>
                 </div>
             </Form>
         );

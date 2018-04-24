@@ -63,36 +63,36 @@ class SignupForm extends React.Component {
                 loading={loading}
             >
                 <Form.Field error={!!errors.email}>
-                    <label htmlFor="email">Email</label>
+                    <label htmlFor="email">Електронна пошта</label>
                     <input
                         type="text"
                         id="email"
                         name="email"
-                        placeholder="Email"
+                        placeholder="username@gmail.com"
                         value={data.email}
                         onChange={this.onChange}
                     />
                     {errors.email && <InlineError text={errors.email} />}
                 </Form.Field>
                 <Form.Field error={!!errors.password}>
-                    <label htmlFor="password">Password</label>
+                    <label htmlFor="password">Пароль</label>
                     <input
                         type="password"
                         id="password"
                         name="password"
-                        placeholder="Password"
+                        placeholder="password"
                         value={data.password}
                         onChange={this.onChange}
                     />
                     {errors.password && <InlineError text={errors.password} />}
                 </Form.Field>
                 <Form.Field error={!!errors.passwordConfirm}>
-                    <label htmlFor="passwordConfirm">Password confirm</label>
+                    <label htmlFor="passwordConfirm">Підтверджння паролю</label>
                     <input
                         type="password"
                         id="passwordConfirm"
                         name="passwordConfirm"
-                        placeholder="Password confirm"
+                        placeholder="password confirm"
                         value={data.passwordConfirm}
                         onChange={this.onChange}
                     />
@@ -101,7 +101,7 @@ class SignupForm extends React.Component {
                     )}
                 </Form.Field>
                 <div className="submit-button-container">
-                    <Button primary>Submit</Button>
+                    <Button className="purple-button">Зареєструватись</Button>
                 </div>
             </Form>
         );
