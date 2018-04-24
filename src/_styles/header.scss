@@ -9,7 +9,7 @@
     }
 
     .top-navigation {
-        padding: 24px;
+        padding: 24px 40px;
         .left-navigation {
             display: inline-block;
             .logo {
@@ -32,8 +32,7 @@
         }
 
         .right-navigation {
-            display: inline-block;
-            text-align: rignt;
+            text-align: right;
             font-size: 18px;
             ul {
                 display: inline-block;
@@ -42,6 +41,10 @@
                 li {
                     display: inline-block;
                     padding: 0 16px;
+
+                    &:last-child {
+                        padding: 0 0 0 16px;
+                    }
                 }
             }
         }
@@ -52,6 +55,21 @@ button.purple-button,
 button.ui.button.purple-button {
     background: #9013fe;
     color: #fff;
+    font-family: Roboto;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px,
+        rgba(0, 0, 0, 0.19) 0px 3px 10px;
+    min-width: 110px;
+
+    &:hover {
+        background: rgba(144, 19, 254, 0.8);
+    }
+}
+
+button.white-purple-button,
+button.ui.button.white-purple-button {
+    position: relative;
+    background: #fff;
+    color: #9013fe;
     font-family: Roboto;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 10px,
         rgba(0, 0, 0, 0.19) 0px 3px 10px;

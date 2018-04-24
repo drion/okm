@@ -21,30 +21,32 @@ const Header = () => (
                         </Link>
                     </div>
                 </Grid.Column>
-                <Grid.Column floated="right" width={9}>
-                    <div className="right-navigation">
-                        <ul>
-                            <li>
-                                <Link to="">Каталог</Link>
-                            </li>
-                            <li>
-                                <Link to="">Дослідити</Link>
-                            </li>
-                            <li>
-                                <Link to="">Профорієнтаційне тестування</Link>
-                            </li>
-                            <li>
-                                <Link to="/login">Увійти</Link>
-                            </li>
-                            <li>
-                                <Link to="/signup">
-                                    <Button className="purple-button">
-                                        Розпочати
-                                    </Button>
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
+                <Grid.Column
+                    floated="right"
+                    className="right-navigation"
+                    width={9}
+                >
+                    <ul>
+                        <li>
+                            <Link to="">Каталог</Link>
+                        </li>
+                        <li>
+                            <Link to="">Дослідити</Link>
+                        </li>
+                        <li>
+                            <Link to="">Профорієнтаційне тестування</Link>
+                        </li>
+                        <li>
+                            <Link to="/login">Увійти</Link>
+                        </li>
+                        <li>
+                            <Link to="/signup">
+                                <Button className="purple-button">
+                                    Розпочати
+                                </Button>
+                            </Link>
+                        </li>
+                    </ul>
                 </Grid.Column>
             </Grid>
         </div>
