@@ -1,10 +1,13 @@
 import React from "react";
 
-import { Grid, Card, Button } from "semantic-ui-react";
+import { Grid, Card, Button, Image } from "semantic-ui-react";
 
 import Header from "./Header";
 
 import bachelorImage from "../_resources/bach-prog.png";
+import linesImage from "../_resources/lines.png";
+import tabletImage from "../_resources/tablet.png";
+import macImage from "../_resources/mac.png";
 
 const HomePage = () => (
     <div className="home-page">
@@ -13,7 +16,7 @@ const HomePage = () => (
             <p className="moto">Знайди свій шлях у майбутнє!</p>
             <Grid divided="vertically">
                 <Grid.Row columns={2}>
-                    <Grid.Column width={10}>
+                    <Grid.Column width={11}>
                         <Card className="bachelor-card">
                             <img
                                 className="bach-img"
@@ -47,22 +50,87 @@ const HomePage = () => (
                             </Card.Content>
                         </Card>
                     </Grid.Column>
-                    <Grid.Column width={4}>
+                    <Grid.Column width={5}>
                         <Grid columns={1}>
                             <Grid.Row>
                                 <Grid.Column>
-                                    <Card>
-                                        <Card.Content>test</Card.Content>
+                                    <Card className="side-block">
+                                        <Grid columns="two">
+                                            <Grid.Row>
+                                                <Grid.Column width="6">
+                                                    <Image
+                                                        className="side-img"
+                                                        src={linesImage}
+                                                        alt="bachelorImage"
+                                                    />
+                                                </Grid.Column>
+                                                <Grid.Column width="10">
+                                                    <p className="type purple-text">
+                                                        Вступай
+                                                    </p>
+                                                    <p className="side-block-header">
+                                                        Програмна Інженерія
+                                                    </p>
+                                                    <p className="additional">
+                                                        Стань крутим
+                                                        програмістом
+                                                    </p>
+                                                </Grid.Column>
+                                            </Grid.Row>
+                                        </Grid>
                                     </Card>
                                 </Grid.Column>
                                 <Grid.Column>
-                                    <Card>
-                                        <Card.Content>Test</Card.Content>
+                                    <Card className="side-block">
+                                        <Grid columns="two">
+                                            <Grid.Row>
+                                                <Grid.Column width="6">
+                                                    <Image
+                                                        className="side-img"
+                                                        src={tabletImage}
+                                                        alt="bachelorImage"
+                                                    />
+                                                </Grid.Column>
+                                                <Grid.Column width="10">
+                                                    <p className="type red-text">
+                                                        Нове
+                                                    </p>
+                                                    <p className="side-block-header">
+                                                        Бізнес Аналітика
+                                                    </p>
+                                                    <p className="additional">
+                                                        На межі з економікою
+                                                    </p>
+                                                </Grid.Column>
+                                            </Grid.Row>
+                                        </Grid>
                                     </Card>
                                 </Grid.Column>
                                 <Grid.Column>
-                                    <Card>
-                                        <Card.Content>Test</Card.Content>
+                                    <Card className="side-block">
+                                        <Grid columns="two">
+                                            <Grid.Row>
+                                                <Grid.Column width="6">
+                                                    <Image
+                                                        className="side-img"
+                                                        src={macImage}
+                                                        alt="bachelorImage"
+                                                    />
+                                                </Grid.Column>
+                                                <Grid.Column width="10">
+                                                    <p className="type orange-text">
+                                                        Досліджуй
+                                                    </p>
+                                                    <p className="side-block-header">
+                                                        Комп’ютерні Науки
+                                                    </p>
+                                                    <p className="additional">
+                                                        Стань крутим
+                                                        програмістом
+                                                    </p>
+                                                </Grid.Column>
+                                            </Grid.Row>
+                                        </Grid>
                                     </Card>
                                 </Grid.Column>
                             </Grid.Row>
