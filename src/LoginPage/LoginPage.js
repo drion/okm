@@ -1,13 +1,16 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Card } from "semantic-ui-react";
+import { connect } from "react-redux";
 
+import userActions from "../_actions/user.actions";
 import Header from "../HomePage/Header";
 import LoginForm from "./LoginForm";
 
 class LoginPage extends React.Component {
     state = {};
 
-    handleSubmit = data => console.log(data);
+    handleSubmit = data => this.props.login(data);
 
     render() {
         return (
@@ -21,4 +24,10 @@ class LoginPage extends React.Component {
     }
 }
 
-export default LoginPage;
+LoginPage.propTypes = {
+    login: PropTypes.func.isRequired
+};
+
+export default connect(null, {
+    login: userActions.login
+})(LoginPage);

@@ -8,7 +8,7 @@ const handleResponse = response =>
         : Promise.reject(response.statusText);
 
 const login = (username, password) =>
-    axios.post("/api/token/", { username, password }).then(handleResponse);
+    axios.post("/auth/login", { username, password }).then(handleResponse);
 
 const getCurrentUser = () =>
     axios.get("/api/users/me/", { headers: authHeader() }).then(handleResponse);

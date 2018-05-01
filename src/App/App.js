@@ -5,8 +5,10 @@ import { Route } from "react-router";
 import HomePage from "../HomePage/HomePage";
 import LoginPage from "../LoginPage/LoginPage";
 import SignupPage from "../SignupPage/SignupPage";
+import Dashboard from "../Dashboard/Dashboard";
 
 import GuestRoute from "../_components/routes/GuestRoute";
+import PrivateRoute from "../_components/routes/PrivateRoute";
 
 const App = ({ location }) => (
     <div className="container">
@@ -22,6 +24,12 @@ const App = ({ location }) => (
             exact
             path="/signup"
             component={SignupPage}
+        />
+        <PrivateRoute
+            location={location}
+            exact
+            path="/dashboard"
+            component={Dashboard}
         />
     </div>
 );
