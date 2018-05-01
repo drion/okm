@@ -70,7 +70,7 @@ class LoginForm extends React.Component {
                         type="password"
                         id="password"
                         name="password"
-                        placeholder="password"
+                        placeholder="Пароль"
                         value={data.password}
                         onChange={this.onChange}
                     />

@@ -10,7 +10,9 @@ class SignupForm extends React.Component {
         data: {
             email: "",
             password: "",
-            passwordConfirm: ""
+            passwordConfirm: "",
+            firstName: "",
+            lastName: ""
         },
         loading: false,
         errors: {}
@@ -62,6 +64,32 @@ class SignupForm extends React.Component {
                 onSubmit={this.onSubmit}
                 loading={loading}
             >
+                <Form.Field error={!!errors.firstName}>
+                    <label htmlFor="firstName">Ім`я</label>
+                    <input
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        placeholder="Ім'я"
+                        value={data.firstName}
+                        onChange={this.onChange}
+                    />
+                    {errors.firstName && (
+                        <InlineError text={errors.firstName} />
+                    )}
+                </Form.Field>
+                <Form.Field error={!!errors.lastName}>
+                    <label htmlFor="lastName">Прізвище</label>
+                    <input
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        placeholder="Прізвище"
+                        value={data.lastName}
+                        onChange={this.onChange}
+                    />
+                    {errors.lastName && <InlineError text={errors.lastName} />}
+                </Form.Field>
                 <Form.Field error={!!errors.email}>
                     <label htmlFor="email">Електронна пошта</label>
                     <input
@@ -80,7 +108,7 @@ class SignupForm extends React.Component {
                         type="password"
                         id="password"
                         name="password"
-                        placeholder="password"
+                        placeholder="Пароль"
                         value={data.password}
                         onChange={this.onChange}
                     />
@@ -92,7 +120,7 @@ class SignupForm extends React.Component {
                         type="password"
                         id="passwordConfirm"
                         name="passwordConfirm"
-                        placeholder="password confirm"
+                        placeholder="Підтверджння паролю"
                         value={data.passwordConfirm}
                         onChange={this.onChange}
                     />
