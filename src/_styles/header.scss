@@ -6,10 +6,17 @@
     .header-image {
         position: absolute;
         z-index: -1;
+        width: 100%;
+        img {
+            width: 100%;
+        }
     }
 
     .top-navigation {
         padding: 24px 40px;
+        max-width: 1500px;
+        margin-left: auto;
+        margin-right: auto;
         .left-navigation {
             display: inline-block;
             .logo {

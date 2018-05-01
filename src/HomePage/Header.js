@@ -24,7 +24,7 @@ const Header = () => (
                 <Grid.Column
                     floated="right"
                     className="right-navigation"
-                    width={9}
+                    width={12}
                 >
                     <ul>
                         <li>
