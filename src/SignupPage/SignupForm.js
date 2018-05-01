@@ -51,6 +51,10 @@ class SignupForm extends React.Component {
             errors.passwordConfirm = "Passwords don`t match";
         if (!data.passwordConfirm)
             errors.passwordConfirm = "Password confirmation is required";
+        if (!data.firstName)
+            errors.firstName = "First name confirmation is required";
+        if (!data.lastName)
+            errors.lastName = "Last name confirmation is required";
 
         return errors;
     };
