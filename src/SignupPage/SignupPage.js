@@ -5,7 +5,7 @@ import { Card } from "semantic-ui-react";
 
 import Header from "../HomePage/Header";
 import SignupForm from "./SignupForm";
-import userService from "../_services/user.service";
+import userActions from "../_actions/user.actions";
 
 class SignupPage extends React.Component {
     state = {};
@@ -19,7 +19,7 @@ class SignupPage extends React.Component {
             password: data.password,
             repeatPassword: data.passwordConfirm
         };
-        this.props.signup(postData);
+        return this.props.signup(postData);
     };
 
     render() {
@@ -38,4 +38,4 @@ SignupPage.propTypes = {
     signup: PropTypes.func.isRequired
 };
 
-export default connect(null, { signup: userService.signup })(SignupPage);
+export default connect(null, { signup: userActions.signup })(SignupPage);

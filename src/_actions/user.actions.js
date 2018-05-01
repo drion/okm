@@ -21,7 +21,33 @@ function login(username, password) {
         return userService.login(username, password).then(
             payload => {
                 dispatch(success(payload));
-                history.push("/");
+                history.push("/dashboard");
+            },
+            error => dispatch(failure(error))
+        );
+    };
+}
+
+function signup(data) {
+    function request() {
+        return { type: userConstants.SIGNUP_REQUEST };
+    }
+
+    function success(payload) {
+        return { type: userConstants.SIGNUP_SUCCESS, ...payload };
+    }
+
+    function failure(error) {
+        return { type: userConstants.SIGNUP_FAILURE, error };
+    }
+
+    return dispatch => {
+        dispatch(request());
+
+        return userService.signup(data).then(
+            payload => {
+                dispatch(success(payload));
+                history.push("/dashboard");
             },
             error => dispatch(failure(error))
         );
@@ -60,6 +86,7 @@ function getCurrentUser() {
 
 const userActions = {
     login,
+    signup,
     logout,
     getCurrentUser
 };
