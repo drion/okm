@@ -112,3 +112,69 @@
 .orange-text {
     color: #ff6912;
 }
+
+@media screen and (max-width: 1380px) {
+    .ui.card.bachelor-card {
+        p.content {
+            padding: 0 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 1233px) {
+    .ui.card.bachelor-card {
+        padding-top: 24px;
+    }
+}
+
+@media screen and (max-width: 1128px) {
+    .header {
+        .left-navigation {
+            img {
+                margin-left: 20px;
+            }
+            .logo {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1192px) {
+    .header {
+        .left-navigation {
+            img {
+                margin-left: 20px;
+            }
+            .logo {
+                display: none;
+            }
+        }
+    }
+    .top-content {
+        display: block !important;
+        div.column.bachelor-col.computer.wide.eleven,
+        div#side-blocks-col.five.wide.column.side-blocks {
+            display: block !important;
+            width: 100% !important;
+        }
+
+        .bachelor-card {
+            margin: 30px auto;
+        }
+
+        .bachelor-col {
+            margin: 10px 0 40px !important;
+        }
+
+        .side-blocks-content {
+            display: flex !important;
+            flex-wrap: wrap !important;
+            justify-content: center !important;
+
+            .side-block {
+                margin: 0 20px;
+            }
+        }
+    }
+}

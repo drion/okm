@@ -15,8 +15,8 @@ const HomePage = () => (
         <div className="content">
             <p className="moto">Знайди свій шлях у майбутнє!</p>
             <Grid divided="vertically">
-                <Grid.Row columns={2}>
-                    <Grid.Column width={11}>
+                <Grid.Row columns={2} className="top-content">
+                    <Grid.Column computer={11} className="bachelor-col">
                         <Card className="bachelor-card">
                             <img
                                 className="bach-img"
@@ -50,10 +50,14 @@ const HomePage = () => (
                             </Card.Content>
                         </Card>
                     </Grid.Column>
-                    <Grid.Column width={5}>
+                    <Grid.Column
+                        width={5}
+                        className="side-blocks"
+                        id="side-blocks-col"
+                    >
                         <Grid columns={1}>
                             <Grid.Row>
-                                <Grid.Column>
+                                <Grid.Column className="side-blocks-content">
                                     <Card className="side-block">
                                         <Grid columns="two">
                                             <Grid.Row>
@@ -79,8 +83,6 @@ const HomePage = () => (
                                             </Grid.Row>
                                         </Grid>
                                     </Card>
-                                </Grid.Column>
-                                <Grid.Column>
                                     <Card className="side-block">
                                         <Grid columns="two">
                                             <Grid.Row>
@@ -105,8 +107,6 @@ const HomePage = () => (
                                             </Grid.Row>
                                         </Grid>
                                     </Card>
-                                </Grid.Column>
-                                <Grid.Column>
                                     <Card className="side-block">
                                         <Grid columns="two">
                                             <Grid.Row>
