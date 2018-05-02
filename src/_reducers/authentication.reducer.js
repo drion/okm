@@ -16,6 +16,7 @@ export default function authentication(state = initialState, action) {
                 isLoading: true
             };
 
+        case userConstants.SIGNUP_SUCCESS:
         case userConstants.LOGIN_SUCCESS:
             return {
                 ...initialState,
@@ -23,6 +24,7 @@ export default function authentication(state = initialState, action) {
                 refresh: action.refresh
             };
 
+        case userConstants.SIGNUP_FAILURE:
         case (userConstants.LOGIN_FAILURE,
         authenticationConstants.JWT_REFRESH_FAILURE):
             return { ...initialState };
