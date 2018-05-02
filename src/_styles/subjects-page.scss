@@ -80,3 +80,22 @@
         }
     }
 }
+
+.subject-page {
+    .content {
+        max-width: 1000px;
+        margin: 40px auto;
+
+        .subject-card {
+            width: 100%;
+            min-height: 300px;
+            padding: 20px;
+            .image-col {
+                img {
+                    max-width: 150px;
+                    margin: 20px auto;
+                }
+            }
+        }
+    }
+}

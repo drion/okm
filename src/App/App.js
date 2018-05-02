@@ -7,6 +7,7 @@ import LoginPage from "../LoginPage/LoginPage";
 import SignupPage from "../SignupPage/SignupPage";
 import Dashboard from "../Dashboard/Dashboard";
 import SubjectsPage from "../SubjectsPage/SubjectsPage";
+import SubjectPage from "../SubjectsPage/SubjectPage";
 
 import GuestRoute from "../_components/routes/GuestRoute";
 import PrivateRoute from "../_components/routes/PrivateRoute";
@@ -19,6 +20,12 @@ const App = ({ location }) => (
             exact
             path="/subjects"
             component={SubjectsPage}
+        />
+        <Route
+            location={location}
+            exact
+            path="/subjects/:id"
+            component={SubjectPage}
         />
         <GuestRoute
             location={location}
