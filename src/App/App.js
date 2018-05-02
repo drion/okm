@@ -6,6 +6,7 @@ import HomePage from "../HomePage/HomePage";
 import LoginPage from "../LoginPage/LoginPage";
 import SignupPage from "../SignupPage/SignupPage";
 import Dashboard from "../Dashboard/Dashboard";
+import SubjectsPage from "../SubjectsPage/SubjectsPage";
 
 import GuestRoute from "../_components/routes/GuestRoute";
 import PrivateRoute from "../_components/routes/PrivateRoute";
@@ -13,6 +14,12 @@ import PrivateRoute from "../_components/routes/PrivateRoute";
 const App = ({ location }) => (
     <div className="container">
         <Route location={location} exact path="/" component={HomePage} />
+        <Route
+            location={location}
+            exact
+            path="/subjects"
+            component={SubjectsPage}
+        />
         <GuestRoute
             location={location}
             exact

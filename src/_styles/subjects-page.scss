@@ -1,0 +1,82 @@
+.subjects-page {
+    .content {
+        max-width: 1000px;
+        margin: 40px auto;
+
+        .subjects-list-card {
+            .no-subjects {
+                height: 100px;
+                text-align: center;
+                color: #aaa;
+                font-size: 16px;
+                line-height: 80px;
+            }
+            width: 100%;
+            padding: 20px;
+
+            .ui.selection.dropdown {
+                width: 50px;
+            }
+
+            .select-label {
+                margin: 0 20px;
+                font-size: 15px !important;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+
+            h1 {
+                color: #555 !important;
+            }
+
+            .subject-item {
+                display: flex;
+                align-items: center;
+                &:hover {
+                    background: #eee;
+                    transition-duration: 200ms;
+                    .header {
+                        color: #1e70bf !important;
+                        transition-duration: 200ms;
+                    }
+
+                    img {
+                        max-width: 45px;
+                        transition-duration: 200ms;
+                    }
+
+                    .content {
+                        .description {
+                            color: #111 !important;
+                            transition-duration: 200ms;
+                        }
+                    }
+
+                    cursor: pointer !important;
+                }
+
+                .content {
+                    margin: 10px;
+                    .header {
+                        color: #000;
+                        margin-left: 10px;
+                    }
+                    .description {
+                        color: #555 !important;
+                        margin: 10px !important;
+                    }
+                }
+                .ui.tiny.image {
+                    padding: 15px 20px;
+                }
+
+                img {
+                    max-width: 40px;
+                }
+                padding-bottom: 12px;
+            }
+        }
+    }
+}

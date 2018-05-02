@@ -24,9 +24,9 @@ const login = ({ username, password }) => {
 //     axios.post("/auth/register", { ...data }).then(handleResponse);
 
 const signup = data => {
-    const data = JSON.stringify(data);
+    const postData = JSON.stringify(data);
 
-    axios.post("/auth/register", data, {
+    axios.post("/auth/register", postData, {
         headers: {
             "Content-Type": "application/json"
         }
