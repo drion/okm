@@ -11,12 +11,17 @@ import subjectAction from "../_actions/subject.actions";
 class SubjectsPage extends React.Component {
     state = {};
 
-    componentDidUpdate() {
+    handleSelectedCourse() {
         const { course, semester } = this.state;
         if (course && semester) this.props.getSubjectsList();
     }
 
-    handleSelectChange = (e, el) => this.setState({ [el.name]: el.value });
+    handleSelectChange = (e, el) => {
+        this.setState(
+            { [el.name]: el.value },
+            this.handleSelectedCourse.bind(this)
+        );
+    };
 
     render() {
         const { subjects } = this.props;
